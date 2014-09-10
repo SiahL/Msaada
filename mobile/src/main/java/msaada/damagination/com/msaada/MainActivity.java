@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 
     Button btMain = null;
+    Button btSettings = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,19 +21,27 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         btMain = (Button)findViewById(R.id.btMain);
+        btSettings = (Button)findViewById(R.id.btSettings);
 
         btMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(MainActivity.this, "Short Press!!", Toast.LENGTH_LONG).show();
             }
         });
 
         btMain.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                Toast.makeText(MainActivity.this, "Hello World", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Long Press!!", Toast.LENGTH_LONG).show();
                 return true;
+            }
+        });
+
+        btSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }

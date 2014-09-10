@@ -1,17 +1,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".MainActivity"
+    android:background="#AEA79F"
     android:weightSum="1">
 
     <TextView
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Touch to select recepients\nHold to send to all preset contacts"/>
+        android:gravity="center_horizontal|top"
+        android:text="Touch to select recipients\nHold to send to all preset contacts"
+        android:textAppearance="?android:textAppearanceMedium"/>
 
     <Button
         android:layout_width="250dp"
@@ -33,6 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/rounded_corner_button"
+            android:id="@+id/btSettings"
             android:text="Settings"
             android:textColor="#ffffff"/>
 
