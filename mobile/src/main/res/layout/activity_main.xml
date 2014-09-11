@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal|top"
+        android:textColor="#ffffff"
         android:text="Touch to select recipients\nHold to send to all preset contacts"
         android:textAppearance="?android:textAppearanceMedium"/>
 
@@ -28,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="0.5"
+        android:layout_weight="1"
         android:gravity="center|bottom">
 
         <Button
@@ -36,8 +37,20 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/rounded_corner_button"
-            android:id="@+id/btSettings"
-            android:text="Settings"
+            android:layout_margin="10dp"
+            android:id="@+id/btOther"
+            android:text="Other"
+            android:textColor="#ffffff"/>
+
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_corner_button"
+            android:id="@+id/btProfile"
+            android:text="My Profile"
+            android:layout_margin="10dp"
             android:textColor="#ffffff"/>
 
         </LinearLayout>

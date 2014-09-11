@@ -1,19 +1,20 @@
 package msaada.damagination.com.msaada;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
 
     Button btMain = null;
-    Button btSettings = null;
+    Button btProfile = null;
+    Button btOther = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         btMain = (Button)findViewById(R.id.btMain);
-        btSettings = (Button)findViewById(R.id.btSettings);
+        btProfile = (Button)findViewById(R.id.btProfile);
+        btOther = (Button) findViewById(R.id.btOther);
 
         btMain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +40,15 @@ public class MainActivity extends Activity {
             }
         });
 
-        btSettings.setOnClickListener(new View.OnClickListener() {
+        btProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent profile = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(profile);
+            }
+        });
+
+        btOther.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
